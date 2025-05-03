@@ -1,0 +1,23 @@
+automated-resource-allocation/
+├── config/
+│   ├── config.yaml                # Configuration files for the system (e.g., models, thresholds)
+│   └── logging_config.yaml        # Logging configuration
+├── data/
+│   ├── raw/                       # Folder to store raw social media data
+│   └── processed/                 # Preprocessed data ready for ML models
+├── models/
+│   ├── allocation_model.py        # Model training and inference code
+│   └── ibm_granite_integration.py # Integration with IBM Granite models
+├── resources/
+│   ├── resource_dispatcher.py    # Logic for dispatching resources
+│   └── utilities.py              # Utility functions
+├── services/
+│   ├── data_collector.py         # Data collection from social media
+│   ├── resource_allocator.py     # Logic for resource allocation
+│   └── dispatcher.py             # Dispatching logic based on allocation
+├── tests/
+│   ├── test_resource_allocator.py  # Unit tests for resource allocation
+│   ├── test_dispatcher.py          # Unit tests for dispatching logic
+│   └── test_integration.py        # Tests for IBM Granite model integration
+├── main.py                       # Entry point for running the system
+└── requirements.txt              # Required dependencies
