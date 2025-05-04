@@ -1,22 +1,19 @@
-from models.allocation_model import AllocationModel
-from resources.resource_dispatcher import ResourceDispatcher
+# main.py
 
+from models.allocation_model import AllocationModel
 
 def main():
-    sample_needs = {
-        "urgency_level": 9,
-        "location": "Area A",
+    needs_data = {
+        "urgency_level": "high",
+        "location": "downtown area",
         "resources_needed": ["ambulance", "medical_team"]
     }
 
-    model = AllocationModel()
-    allocation = model.predict_allocation(sample_needs)
+    allocation_model = AllocationModel()
+    prediction = allocation_model.predict_allocation(needs_data)
 
-    print("Predicted Allocation:", allocation)
-
-    dispatcher = ResourceDispatcher(allocation)
-    dispatcher.dispatch_resources()
-
+    print("Suggested Allocation:", prediction)
 
 if __name__ == "__main__":
     main()
+

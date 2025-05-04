@@ -1,31 +1,68 @@
+# services/data_collector.py
+
 import requests
 import json
+import logging
 from config import config
 
+logger = logging.getLogger(__name__)
+
 class SocialMediaDataCollector:
-    def __init__(self, data_source):
-        self.data_source = data_source
-        self.api_url = self.get_api_url(data_source)
-        
-    def get_api_url(self, data_source):
+    def __init__(self, data_source="twitter"):
+        self.data_source = data_source.lower()
+        self.api_url = self.get_api_url()
+        self.headers = self.get_headers()
+
+    def get_api_url(self):
         """
-        Return the API URL based on the source (e.g., Twitter, Facebook).
+        Return the API URL based on the source.
         """
-        if data_source == "twitter":
+        if self.data_source == "twitter":
             return "https://api.twitter.com/2/tweets/search/recent"
-        elif data_source == "facebook":
+        elif self.data_source == "facebook":
             return "https://graph.facebook.com/v11.0/me/feed"
         else:
-            raise ValueError("Unsupported social media source")
-    
-    def collect_data(self, query_params):
-        """
-        Collect data from the social media API based on query parameters.
-        """
-        response = requests.get(self.api_url, params=query_params)
-        return json.loads(response.text)
+            raise ValueError(f"Unsupported social media source: {self.data_source}")
 
+    def get_headers(self):
+        """
+        Get authentication headers based on the platform.
+        """
+        if self.data_source == "twitter":
+            bearer_token = config.models.get('twitter_bearer_token', '')
+            return {
+                "Authorization": f"Bearer {bearer_token}"
+            }
+        # Extend to Facebook or others as needed
+        return {}
+
+    def collect_data(self, query="help needed", max_results=10):
+        """
+        Collect data from the social media API.
+        """
+        if self.data_source == "twitter":
+            params = {
+                "query": query,
+                "max_results": max_results,
+                "tweet.fields": "created_at,text,author_id"
+            }
+        else:
+            raise NotImplementedError("Only Twitter is currently supported.")
+
+        try:
+            logger.info(f"Requesting tweets with query: {query}")
+            response = requests.get(self.api_url, headers=self.headers, params=params)
+            response.raise_for_status()
+            data = response.json()
+            tweets = [tweet["text"] for tweet in data.get("data", [])]
+            return tweets
+        except requests.RequestException as e:
+            logger.error(f"Failed to fetch data from {self.data_source}: {e}")
+            return []
+
+# For testing purposes
 if __name__ == "__main__":
-    collector = SocialMediaDataCollector(config.models['social_media_data_source'])
-    data = collector.collect_data({"query": "help needed"})
-    print(f"Collected Data: {data}")
+    collector = SocialMediaDataCollector(data_source=config.models['social_media_data_source'])
+    tweets = collector.collect_data(query="flood OR earthquake OR urgent", max_results=5)
+    for t in tweets:
+        print(f"- {t}")

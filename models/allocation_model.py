@@ -1,27 +1,31 @@
-from models.ibm_granite_integration import GraniteChatModel
+# models/allocation_model.py
+
+import requests
 
 class AllocationModel:
-    def __init__(self):
-        self.chat_model = GraniteChatModel()
+    def __init__(self, model_name="granite3.2:8b", endpoint="http://localhost:11434/api/generate"):
+        self.model_name = model_name
+        self.endpoint = endpoint
 
-    def predict_allocation(self, needs_data: dict) -> dict:
-        """
-        Predict resource allocation based on needs.
-        """
+    def predict_allocation(self, needs_data: dict) -> str:
+        # Convert structured input into a prompt
         prompt = (
-            f"The following area has an urgent situation:\n"
-            f"Urgency Level: {needs_data.get('urgency_level')}\n"
-            f"Location: {needs_data.get('location')}\n"
-            f"Resources Needed: {', '.join(needs_data.get('resources_needed', []))}\n"
-            f"Please suggest how to allocate available emergency resources (e.g., ambulances, medical teams). "
-            f"Respond with a JSON object like {{'ambulance': 2, 'medical_team': 1}}."
+            f"The following emergency has occurred:\n"
+            f"- Urgency level: {needs_data['urgency_level']}\n"
+            f"- Location: {needs_data['location']}\n"
+            f"- Resources needed: {', '.join(needs_data['resources_needed'])}\n\n"
+            "Based on this, suggest how resources should be allocated efficiently."
         )
 
-        system_message = "You are an emergency response assistant trained to allocate disaster relief resources efficiently."
-
-        response = self.chat_model.chat(prompt, system=system_message)
+        payload = {
+            "model": self.model_name,
+            "prompt": prompt,
+            "stream": False
+        }
 
         try:
-            return eval(response) if isinstance(response, str) else response
-        except Exception:
-            return {"error": "Failed to parse model response."}
+            response = requests.post(self.endpoint, json=payload)
+            response.raise_for_status()
+            return response.json()["response"]
+        except Exception as e:
+            return f"Error during model call: {e}"

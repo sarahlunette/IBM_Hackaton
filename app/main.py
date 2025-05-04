@@ -1,0 +1,15 @@
+from fastapi import FastAPI, Query
+from models.allocation_model import AllocationModel
+
+app = FastAPI()
+model = AllocationModel()
+
+@app.get("/predict-allocation")
+def predict(urgency: str, location: str, needs: str):
+    needs_data = {
+        "urgency_level": urgency,
+        "location": location,
+        "resources_needed": needs.split(",")
+    }
+    prediction = model.predict_allocation(needs_data)
+    return {"suggested_allocation": prediction}

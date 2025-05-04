@@ -1,3 +1,6 @@
 granite-io
 requests
 pyyaml
+ibm-generative-ai
+python-dotenv
+ibm-watson
