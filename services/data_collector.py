@@ -1,5 +1,3 @@
-# services/data_collector.py
-
 import requests
 import json
 import logging
@@ -14,9 +12,6 @@ class SocialMediaDataCollector:
         self.headers = self.get_headers()
 
     def get_api_url(self):
-        """
-        Return the API URL based on the source.
-        """
         if self.data_source == "twitter":
             return "https://api.twitter.com/2/tweets/search/recent"
         elif self.data_source == "facebook":
@@ -25,21 +20,12 @@ class SocialMediaDataCollector:
             raise ValueError(f"Unsupported social media source: {self.data_source}")
 
     def get_headers(self):
-        """
-        Get authentication headers based on the platform.
-        """
         if self.data_source == "twitter":
             bearer_token = config.models.get('twitter_bearer_token', '')
-            return {
-                "Authorization": f"Bearer {bearer_token}"
-            }
-        # Extend to Facebook or others as needed
+            return {"Authorization": f"Bearer {bearer_token}"}
         return {}
 
-    def collect_data(self, query="help needed", max_results=10):
-        """
-        Collect data from the social media API.
-        """
+    def collect_data(self, query="emergency OR help needed", max_results=10):
         if self.data_source == "twitter":
             params = {
                 "query": query,
@@ -50,19 +36,12 @@ class SocialMediaDataCollector:
             raise NotImplementedError("Only Twitter is currently supported.")
 
         try:
-            logger.info(f"Requesting tweets with query: {query}")
+            logger.info(f"Requesting {self.data_source} posts with query: {query}")
             response = requests.get(self.api_url, headers=self.headers, params=params)
             response.raise_for_status()
             data = response.json()
-            tweets = [tweet["text"] for tweet in data.get("data", [])]
-            return tweets
+            posts = [tweet["text"] for tweet in data.get("data", [])]
+            return posts
         except requests.RequestException as e:
             logger.error(f"Failed to fetch data from {self.data_source}: {e}")
             return []
-
-# For testing purposes
-if __name__ == "__main__":
-    collector = SocialMediaDataCollector(data_source=config.models['social_media_data_source'])
-    tweets = collector.collect_data(query="flood OR earthquake OR urgent", max_results=5)
-    for t in tweets:
-        print(f"- {t}")

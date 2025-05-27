@@ -1,5 +1,3 @@
-# resources/utilities.py
-
 import re
 
 def extract_needs_from_text(text: str):
@@ -37,4 +35,32 @@ def extract_needs_from_text(text: str):
         "urgency_level": urgency_level,
         "location": location,
         "resources_needed": list(set(detected_resources))
+    }
+
+
+def extract_volunteer_offers(text: str):
+    volunteer_keywords = {
+        "data_specialist": ["data analyst", "data scientist", "data engineer", "data team"],
+        "manual_worker": ["volunteer", "manual labor", "cleanup", "clean debris", "helping hand"]
+    }
+
+    offered_roles = []
+    for role, keywords in volunteer_keywords.items():
+        for kw in keywords:
+            if kw in text.lower():
+                offered_roles.append(role)
+                break
+
+    location = "unknown"
+    if "downtown" in text.lower():
+        location = "downtown"
+    elif "northern" in text.lower():
+        location = "northern area"
+
+    if not offered_roles:
+        return None
+
+    return {
+        "location": location,
+        "roles_offered": list(set(offered_roles))
     }

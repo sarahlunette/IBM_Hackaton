@@ -1,23 +1,39 @@
 automated-resource-allocation/
 ├── config/
-│   ├── config.yaml                # Configuration files for the system (e.g., models, thresholds)
-│   └── logging_config.yaml        # Logging configuration
+│   ├── config.yaml                  # Thresholds, API keys (HF, X/Twitter, etc.)
+│   └── logging_config.yaml          # Structured logging across services
+│
 ├── data/
-│   ├── raw/                       # Folder to store raw social media data
-│   └── processed/                 # Preprocessed data ready for ML models
+│   ├── raw/                         # Unfiltered social media JSON, image data
+│   └── processed/                   # Cleaned text, sentiment scores, metadata
+│
 ├── models/
-│   ├── allocation_model.py        # Model training and inference code
-│   └── ibm_granite_integration.py # Integration with IBM Granite models
+│   ├── allocation_model.py          # Predict priority + match resources
+│   ├── ibm_granite_integration.py   # GenAI model interface
+│   └── crisis_classifier.py         # Zero-shot or fine-tuned classifier for crisis types
+│
 ├── resources/
-│   ├── resource_dispatcher.py    # Logic for dispatching resources
-│   └── utilities.py              # Utility functions
+│   ├── resource_dispatcher.py       # Matching available resources to predicted needs
+│   ├── utilities.py                 # Shared utilities (e.g., GPS parser, time formatter)
+│   └── resources_registry.yaml      # YAML file of all available resources
+│
 ├── services/
-│   ├── data_collector.py         # Data collection from social media
-│   ├── resource_allocator.py     # Logic for resource allocation
-│   └── dispatcher.py             # Dispatching logic based on allocation
+│   ├── data_collector.py            # Scrape/stream social media (X, IG, etc.)
+│   ├── geo_locator.py               # NLP location tagging and GPS resolution
+│   ├── sentiment_analyzer.py        # Emotional signal extractor (optional GenAI)
+│   ├── resource_allocator.py        # Combines classifier output + dispatch logic
+│   └── dispatcher.py                # Communication with real-world or simulated units
+│
+├── dashboard/
+│   ├── streamlit_app.py             # Optional UI for real-time monitoring
+│   └── api_backend.py               # RESTful interface for external apps
+│
 ├── tests/
-│   ├── test_resource_allocator.py  # Unit tests for resource allocation
-│   ├── test_dispatcher.py          # Unit tests for dispatching logic
-│   └── test_integration.py        # Tests for IBM Granite model integration
-├── main.py                       # Entry point for running the system
-└── requirements.txt              # Required dependencies
+│   ├── test_resource_allocator.py
+│   ├── test_dispatcher.py
+│   ├── test_integration.py
+│   ├── test_geo_locator.py
+│   └── test_crisis_classifier.py
+│
+├── main.py                          # Full pipeline: data → classification → allocation
+└── requirements.txt                 # Include transformers, torch, streamlit, etc.

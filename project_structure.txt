@@ -1,0 +1,38 @@
+.
+├── README
+├── __pycache__
+│   └── main.cpython-311.pyc
+├── app
+│   ├── __pycache__
+│   └── main.py
+├── config
+│   ├── config.yml
+│   └── logging_config.py
+├── cuda-12-6_12.6.0-1_amd64.deb
+├── cuda-12-6_12.6.0-1_amd64.deb.1
+├── dashboard
+│   └── app.py
+├── logging_config.yml
+├── main.py
+├── models
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── allocation_model.py
+│   ├── crisis_classifier.py
+│   ├── ibm_granite_integration.py
+│   └── ollama_granite_wrapper.py
+├── project_structure.txt
+├── requirements.txt
+├── resources
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── resources_dispatcher.py
+│   └── utilities.py
+└── services
+    ├── __init__.py
+    ├── data_collector.py
+    ├── geo_locator.py
+    ├── resource_allocator.py
+    └── sentiment_analyzer.py
+
+11 directories, 25 files

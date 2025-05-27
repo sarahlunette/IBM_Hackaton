@@ -6,10 +6,13 @@ resources:
   - type: "shelter"
     max_capacity: 100
 
-models:
-  allocation_model: "path/to/ibm_granite_model"
-  social_media_data_source: "twitter"
-
 logging:
   level: "INFO"
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+model:
+  name: ibm-granite/granite-3.3-2b-base
+  token_env_var: HF_TOKEN
+thresholds:
+  sentiment: 0.5
+  crisis_ratio: 0.1

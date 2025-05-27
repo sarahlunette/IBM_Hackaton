@@ -1,4 +1,7 @@
 from fastapi import FastAPI, Query
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models.allocation_model import AllocationModel
 
 app = FastAPI()
