@@ -1,8 +1,9 @@
 import requests
 import json
 import logging
-from config import config
+from config.logging_config import setup_logging
 
+setup_logging()
 logger = logging.getLogger(__name__)
 
 class SocialMediaDataCollector:
@@ -21,11 +22,11 @@ class SocialMediaDataCollector:
 
     def get_headers(self):
         if self.data_source == "twitter":
-            bearer_token = config.models.get('twitter_bearer_token', '')
+            bearer_token = "bearer_token" # TODO: to be changed bearer_token = config.models.get('twitter_bearer_token', '')
             return {"Authorization": f"Bearer {bearer_token}"}
         return {}
 
-    def collect_data(self, query="emergency OR help needed", max_results=10):
+    def collect_data(self, query="emergency OR help needed", max_results=10): # TODO: research on the right query
         if self.data_source == "twitter":
             params = {
                 "query": query,

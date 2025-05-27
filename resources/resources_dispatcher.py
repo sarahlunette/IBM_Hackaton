@@ -6,3 +6,4 @@ class ResourceDispatcher:
         print("Dispatching Resources:")
         for resource, count in self.allocation.items():
             print(f" - {count} units of {resource} sent.")
+# TODO: use the resource dispatcher in the main application logic

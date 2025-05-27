@@ -1,0 +1,854 @@
+{
+  "data": [
+    {
+      "id": "29ed374f-3ea3-4965-a15f-2f9e25bfe7e8",
+      "text": "Ambulance required asap near central park!",
+      "created_at": "2025-05-27T12:12:18.505991Z",
+      "author_id": "3246",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "05c34f04-1cfe-4a1b-b6f1-19d85a1ea3d0",
+      "text": "Downtown is in chaos, people are injured and stuck!",
+      "created_at": "2025-05-27T12:11:18.505991Z",
+      "author_id": "7381",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "c75bfe54-b02c-4517-9522-6217cc8f0f78",
+      "text": "Ambulance required asap near central park!",
+      "created_at": "2025-05-27T12:10:18.505991Z",
+      "author_id": "1106",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "e5318c25-6827-48f7-9dea-69ae3e9f82a8",
+      "text": "Multiple injuries reported at the northern area. Send help!",
+      "created_at": "2025-05-27T12:09:18.505991Z",
+      "author_id": "9309",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "4d374960-24cf-45dd-9202-004d6ca84ce2",
+      "text": "Floodwaters rising quickly in downtown, urgent response needed!",
+      "created_at": "2025-05-27T12:08:18.505991Z",
+      "author_id": "6115",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "d0e949de-e393-403e-a1b8-f1b67dbf709f",
+      "text": "We are trapped and need rescue near the riverbank!",
+      "created_at": "2025-05-27T12:07:18.505991Z",
+      "author_id": "6766",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "09d41903-49ee-48f3-9c52-74da46944369",
+      "text": "We are trapped and need rescue near the riverbank!",
+      "created_at": "2025-05-27T12:06:18.505991Z",
+      "author_id": "7107",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "04f460f5-4f9a-4460-b95f-5970938a3595",
+      "text": "Floodwaters rising quickly in downtown, urgent response needed!",
+      "created_at": "2025-05-27T12:05:18.505991Z",
+      "author_id": "2602",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "db5b77cf-22da-4a73-b96e-5b0343ac5335",
+      "text": "Emergency situation developing in the southern area!",
+      "created_at": "2025-05-27T12:04:18.505991Z",
+      "author_id": "9031",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "ac5d7819-be7b-49e7-8f8d-a2fb7f82e07f",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T12:03:18.505991Z",
+      "author_id": "2751",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "0f1d4568-c340-41f0-b398-be73cd395ea4",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T12:02:18.505991Z",
+      "author_id": "9510",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "f2c3c7b5-263f-4df3-bff6-8fb21edc6ec8",
+      "text": "Emergency situation developing in the southern area!",
+      "created_at": "2025-05-27T12:01:18.505991Z",
+      "author_id": "3480",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "68e61bfb-cac3-4b95-83e4-3ee0b3856b90",
+      "text": "We are trapped and need rescue near the riverbank!",
+      "created_at": "2025-05-27T12:00:18.505991Z",
+      "author_id": "5352",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "4dc21163-7d0f-484a-a000-d3b0f3d9945c",
+      "text": "We need paramedics in southern area, situation is critical!",
+      "created_at": "2025-05-27T11:59:18.505991Z",
+      "author_id": "8631",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "85349848-d269-48a4-9619-fe5d19275ca8",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T11:58:18.505991Z",
+      "author_id": "8598",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "600996de-cc56-4869-936c-ae2fbb74fff9",
+      "text": "Multiple injuries reported at the northern area. Send help!",
+      "created_at": "2025-05-27T11:57:18.505991Z",
+      "author_id": "8692",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "f73ea5d3-021c-435c-8f71-5697c3829503",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T11:56:18.505991Z",
+      "author_id": "1798",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "2122b362-0699-4727-8b4e-ef816388d134",
+      "text": "Multiple injuries reported at the northern area. Send help!",
+      "created_at": "2025-05-27T11:55:18.505991Z",
+      "author_id": "3426",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "6383c1f5-c7d2-42f7-ae26-04f479b14840",
+      "text": "We need paramedics in southern area, situation is critical!",
+      "created_at": "2025-05-27T11:54:18.505991Z",
+      "author_id": "9779",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "a80f8b8c-b539-4700-8c0a-81b78a888084",
+      "text": "We need paramedics in southern area, situation is critical!",
+      "created_at": "2025-05-27T11:53:18.505991Z",
+      "author_id": "4343",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "098e20a1-750b-4854-bdfb-c25231d8ca4a",
+      "text": "Urgent help needed in downtown, major flooding!",
+      "created_at": "2025-05-27T11:52:18.505991Z",
+      "author_id": "7735",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "62cfb029-22a9-49de-b765-f46e6df763d5",
+      "text": "Downtown is in chaos, people are injured and stuck!",
+      "created_at": "2025-05-27T11:51:18.505991Z",
+      "author_id": "1533",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "68266c06-c3c4-4dbe-a669-05aa89960d84",
+      "text": "Multiple injuries reported at the northern area. Send help!",
+      "created_at": "2025-05-27T11:50:18.505991Z",
+      "author_id": "1554",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "cb0fbeb4-76a6-428f-a2bf-207365ca51a7",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T11:49:18.505991Z",
+      "author_id": "1008",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "3bce3ee9-6bba-45de-8cb9-414cfd8b9101",
+      "text": "Urgent help needed in downtown, major flooding!",
+      "created_at": "2025-05-27T11:48:18.505991Z",
+      "author_id": "6466",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "a4b296a6-ff55-4e70-8dfc-1e646833d087",
+      "text": "Downtown is in chaos, people are injured and stuck!",
+      "created_at": "2025-05-27T11:47:18.505991Z",
+      "author_id": "5209",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "4c6a3c4b-7729-4491-a617-4a573c7fa6a2",
+      "text": "Ambulance required asap near central park!",
+      "created_at": "2025-05-27T11:46:18.505991Z",
+      "author_id": "2302",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "aba9b281-9883-4dd2-88c1-3cbe84d3dc40",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T11:45:18.505991Z",
+      "author_id": "8154",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "8e1c4a9d-a9b6-47ac-82ad-522a09fc50f1",
+      "text": "Floodwaters rising quickly in downtown, urgent response needed!",
+      "created_at": "2025-05-27T11:44:18.505991Z",
+      "author_id": "3379",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "76fc25e5-f13d-4b5f-a0cb-6a1ac69f9357",
+      "text": "Rescue boats required immediately at northern area!",
+      "created_at": "2025-05-27T11:43:18.505991Z",
+      "author_id": "9957",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "29f8a986-436a-4251-bbfe-55f37b1f9c78",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T11:42:18.505991Z",
+      "author_id": "5032",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "f8a58d6e-5c22-49b1-a7cb-fc917f449874",
+      "text": "We are trapped and need rescue near the riverbank!",
+      "created_at": "2025-05-27T11:41:18.505991Z",
+      "author_id": "7337",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "de8f427a-00d1-488e-8169-bf99ca008351",
+      "text": "Downtown is in chaos, people are injured and stuck!",
+      "created_at": "2025-05-27T11:40:18.505991Z",
+      "author_id": "7111",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "55372f08-30b5-4925-bf2e-e1f147311d2f",
+      "text": "Urgent help needed in downtown, major flooding!",
+      "created_at": "2025-05-27T11:39:18.505991Z",
+      "author_id": "2470",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "435aae11-71cd-4150-82b6-ccc7c0eec4b0",
+      "text": "Emergency situation developing in the southern area!",
+      "created_at": "2025-05-27T11:38:18.505991Z",
+      "author_id": "3191",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "0a847a02-1855-4cf0-a33f-52804151c3d0",
+      "text": "Ambulance required asap near central park!",
+      "created_at": "2025-05-27T11:37:18.505991Z",
+      "author_id": "5309",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "47b2c6a4-c5d2-4f97-b738-8ff1cc593ce6",
+      "text": "Rescue boats required immediately at northern area!",
+      "created_at": "2025-05-27T11:36:18.505991Z",
+      "author_id": "3669",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "16f7f4eb-27fa-4c51-975d-0aabbd344f25",
+      "text": "Emergency situation developing in the southern area!",
+      "created_at": "2025-05-27T11:35:18.505991Z",
+      "author_id": "9249",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "639c7704-91eb-4f95-979c-3904e3f5c296",
+      "text": "Emergency situation developing in the southern area!",
+      "created_at": "2025-05-27T11:34:18.505991Z",
+      "author_id": "4529",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "90e9bcb9-cbbc-42dd-b6ae-d751335dd918",
+      "text": "Urgent help needed in downtown, major flooding!",
+      "created_at": "2025-05-27T11:33:18.505991Z",
+      "author_id": "6456",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "f1872b43-b8d1-4de2-a974-d133cf9297ab",
+      "text": "We need paramedics in southern area, situation is critical!",
+      "created_at": "2025-05-27T11:32:18.505991Z",
+      "author_id": "3733",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "9409a43f-54b4-4762-b4cb-eb83f754c781",
+      "text": "Multiple injuries reported at the northern area. Send help!",
+      "created_at": "2025-05-27T11:31:18.505991Z",
+      "author_id": "4886",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "5c08631e-bce7-405b-9abd-a40f3531ecb3",
+      "text": "Ambulance required asap near central park!",
+      "created_at": "2025-05-27T11:30:18.505991Z",
+      "author_id": "8601",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.34,
+            50.83
+          ]
+        },
+        "place": "southern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "236b2ff7-488e-4d9b-9fac-15f1b1ac5607",
+      "text": "Rescue boats required immediately at northern area!",
+      "created_at": "2025-05-27T11:29:18.505991Z",
+      "author_id": "4506",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "fe2c159e-c8b6-4a8b-9230-2f87f8098c31",
+      "text": "Urgent help needed in downtown, major flooding!",
+      "created_at": "2025-05-27T11:28:18.505991Z",
+      "author_id": "6913",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.345,
+            50.855
+          ]
+        },
+        "place": "riverbank"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "5cefd9a9-8dab-46b0-8fb4-afa5efc88a45",
+      "text": "Can someone send firefighters to the riverbank?",
+      "created_at": "2025-05-27T11:27:18.505991Z",
+      "author_id": "2004",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "b038971f-bc2f-43e3-b0a2-a1d56e328d5c",
+      "text": "Ambulance required asap near central park!",
+      "created_at": "2025-05-27T11:26:18.505991Z",
+      "author_id": "7128",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "6d442498-efb8-4644-a55a-60b1674c1abd",
+      "text": "We need paramedics in southern area, situation is critical!",
+      "created_at": "2025-05-27T11:25:18.505991Z",
+      "author_id": "3243",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.36,
+            50.87
+          ]
+        },
+        "place": "northern area"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "0cbc31ff-53c6-4fb7-8e13-027186ddfde1",
+      "text": "Rescue boats required immediately at northern area!",
+      "created_at": "2025-05-27T11:24:18.505991Z",
+      "author_id": "9512",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.3517,
+            50.8503
+          ]
+        },
+        "place": "downtown"
+      },
+      "lang": "en"
+    },
+    {
+      "id": "3e93a545-0981-448d-b38a-14d522a2774d",
+      "text": "Multiple injuries reported at the northern area. Send help!",
+      "created_at": "2025-05-27T11:23:18.505991Z",
+      "author_id": "6811",
+      "geo": {
+        "coordinates": {
+          "type": "Point",
+          "coordinates": [
+            4.355,
+            50.845
+          ]
+        },
+        "place": "central park"
+      },
+      "lang": "en"
+    }
+  ]
+}

@@ -4,3 +4,6 @@ pyyaml
 ibm-generative-ai
 python-dotenv
 ibm-watson
+kafka-python
+streamlit
+PyYAML

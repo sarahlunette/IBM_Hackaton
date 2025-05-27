@@ -6,20 +6,27 @@
 │   ├── __pycache__
 │   └── main.py
 ├── config
+│   ├── __pycache__
 │   ├── config.yml
 │   └── logging_config.py
 ├── cuda-12-6_12.6.0-1_amd64.deb
 ├── cuda-12-6_12.6.0-1_amd64.deb.1
 ├── dashboard
 │   └── app.py
+├── data
+│   ├── resources.csv
+│   ├── simulate_tweets.py
+│   └── simulated_tweets_with_geo.json
 ├── logging_config.yml
 ├── main.py
 ├── models
 │   ├── __init__.py
 │   ├── __pycache__
 │   ├── allocation_model.py
+│   ├── crisis_chat_interface.py
 │   ├── crisis_classifier.py
 │   ├── ibm_granite_integration.py
+│   ├── llm_allocator.py
 │   └── ollama_granite_wrapper.py
 ├── project_structure.txt
 ├── requirements.txt
@@ -28,11 +35,17 @@
 │   ├── __pycache__
 │   ├── resources_dispatcher.py
 │   └── utilities.py
-└── services
+├── services
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── data_collector.py
+│   ├── geo_locator.py
+│   ├── resource_allocator.py
+│   └── sentiment_analyzer.py
+├── simulated_tweets_formatted.json
+└── tests
     ├── __init__.py
-    ├── data_collector.py
-    ├── geo_locator.py
-    ├── resource_allocator.py
-    └── sentiment_analyzer.py
+    ├── __pycache__
+    └── test_allocation_model.py
 
-11 directories, 25 files
+16 directories, 33 files
