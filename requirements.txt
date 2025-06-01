@@ -7,3 +7,10 @@ ibm-watson
 kafka-python
 streamlit
 PyYAML
+huggingface_hub
+transformers
+pandas
+torch
+fastapi
+textblob
+

@@ -1,48 +1,30 @@
-import requests
-import json
 import logging
-from config.logging_config import setup_logging
 
-setup_logging()
 logger = logging.getLogger(__name__)
 
 class SocialMediaDataCollector:
-    def __init__(self, data_source="twitter"):
+    def __init__(self, data_source="kafka", tweets_buffer=None):
         self.data_source = data_source.lower()
-        self.api_url = self.get_api_url()
-        self.headers = self.get_headers()
-
-    def get_api_url(self):
-        if self.data_source == "twitter":
-            return "https://api.twitter.com/2/tweets/search/recent"
-        elif self.data_source == "facebook":
-            return "https://graph.facebook.com/v11.0/me/feed"
-        else:
+        self.tweets_buffer = tweets_buffer if tweets_buffer is not None else []
+        if self.data_source not in ["twitter", "kafka"]:
             raise ValueError(f"Unsupported social media source: {self.data_source}")
 
-    def get_headers(self):
-        if self.data_source == "twitter":
-            bearer_token = "bearer_token" # TODO: to be changed bearer_token = config.models.get('twitter_bearer_token', '')
-            return {"Authorization": f"Bearer {bearer_token}"}
-        return {}
+    def collect_data(self, query="emergency OR help needed", max_results=10):
+        """
+        Récupère des tweets selon la source choisie.
 
-    def collect_data(self, query="emergency OR help needed", max_results=10): # TODO: research on the right query
-        if self.data_source == "twitter":
-            params = {
-                "query": query,
-                "max_results": max_results,
-                "tweet.fields": "created_at,text,author_id"
-            }
+        - Si source kafka, récupère dans tweets_buffer les derniers max_results tweets.
+        - Sinon, raise NotImplementedError (ou API Twitter si tu veux garder l'ancien code).
+        """
+        if self.data_source == "kafka":
+            logger.info(f"Collecting up to {max_results} tweets from Kafka buffer")
+            # Récupérer les derniers max_results tweets
+            return self.tweets_buffer[-max_results:]
+        
+        elif self.data_source == "twitter":
+            # Ici tu pourrais garder l’ancienne implémentation avec requests.get(...)
+            # ou lever une erreur pour indiquer que ce n’est plus supporté
+            raise NotImplementedError("Direct Twitter API fetching is disabled when using Kafka stream.")
+
         else:
-            raise NotImplementedError("Only Twitter is currently supported.")
-
-        try:
-            logger.info(f"Requesting {self.data_source} posts with query: {query}")
-            response = requests.get(self.api_url, headers=self.headers, params=params)
-            response.raise_for_status()
-            data = response.json()
-            posts = [tweet["text"] for tweet in data.get("data", [])]
-            return posts
-        except requests.RequestException as e:
-            logger.error(f"Failed to fetch data from {self.data_source}: {e}")
-            return []
+            raise ValueError(f"Unsupported data source: {self.data_source}")

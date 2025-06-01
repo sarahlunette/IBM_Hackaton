@@ -55,9 +55,9 @@ st.header("Tweets reçus via Kafka (en temps réel)")
 
 # Bouton pour recharger / traiter les tweets en buffer
 if st.button("Traiter les tweets reçus"):
-
-    # On prend les derniers max_display tweets
-    recent_tweets = tweets_buffer[-max_display:]
+    collector = SocialMediaDataCollector(data_source="kafka", tweets_buffer=tweets_buffer)
+    # Récupérer les derniers tweets depuis Kafka via la classe
+    recent_tweets = collector.collect_data(max_results=max_display)
 
     needs_count = 0
     volunteers_count = 0

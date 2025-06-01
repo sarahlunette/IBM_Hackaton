@@ -2,8 +2,9 @@ import json
 import time
 import os
 import sys
-sys.path.append(os.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from kafka import KafkaProducer
+from kafka.errors import NoBrokersAvailable
 
 KAFKA_TOPIC = 'tweets_topic'
 KAFKA_BOOTSTRAP_SERVERS = 'kafka:9092'  # nom du service kafka dans docker-compose
@@ -12,6 +13,16 @@ def load_tweets(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         tweets = json.load(f)
     return tweets
+
+def create_producer_with_retry(retries=5, delay=5):
+    for i in range(retries):
+        try:
+            producer = KafkaProducer(bootstrap_servers='kafka:9092')
+            return producer
+        except NoBrokersAvailable:
+            print(f"Kafka broker not available, retry {i+1}/{retries} in {delay}s...")
+            time.sleep(delay)
+    raise RuntimeError("Kafka broker not available after retries")
 
 def main():
     producer = KafkaProducer(
